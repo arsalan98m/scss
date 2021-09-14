@@ -1,9 +1,0 @@
-footer {
-  min-height: 10vh;
-  @include flex(row, center);
-
-  h4 {
-    font-size: 4rem;
-    color: red;
-  }
-}
