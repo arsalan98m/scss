@@ -24,26 +24,38 @@
     background-color: $val;
   }
 
-  // running for loop for 9 times to generate light and dark variations
-  // light vaiations
-  @for $i from 1 through 9 {
-    .text-#{$key}-light-#{$i} {
-      color: mix(white, $val, $i * 10);
+  @if ($val != black and $val != white) {
+    // running for loop for 9 times to generate light and dark variations
+    // light vaiations
+    @for $i from 1 through 9 {
+      .text-#{$key}-light-#{$i} {
+        color: mix(white, $val, $i * 10);
+      }
+
+      .bg-#{$key}-light-#{$i} {
+        background-color: mix(white, $val, $i * 10);
+      }
     }
 
-    .bg-#{$key}-light-#{$i} {
-      background-color: mix(white, $val, $i * 10);
+    // dark vaiations
+    @for $i from 1 through 9 {
+      .text-#{$key}-dark-#{$i} {
+        color: mix(black, $val, $i * 10);
+      }
+
+      .bg-#{$key}-dark-#{$i} {
+        background-color: mix(black, $val, $i * 10);
+      }
     }
   }
+}
 
-  // dark vaiations
-  @for $i from 1 through 9 {
-    .text-#{$key}-dark-#{$i} {
-      color: mix(black, $val, $i * 10);
-    }
-
-    .bg-#{$key}-dark-#{$i} {
-      background-color: mix(black, $val, $i * 10);
-    }
+@if (10<5) {
+  .test-if {
+    color: black;
+  }
+} @else {
+  .test-else {
+    color: white;
   }
 }
