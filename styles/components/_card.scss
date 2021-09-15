@@ -22,9 +22,3 @@
     }
   }
 }
-// if we want some kind of calculation which is a bit more complex and we want to debug it
-// -- at debug rule which is used to post messages to the terminal down
-@debug 'hello';
-@debug math.div(10, 2);
-@debug math.floor(2.6);
-@debug math.max(1px, 20px, 15px);
