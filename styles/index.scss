@@ -7,18 +7,6 @@
 // colors
 
 // components (button,card,navbar)
+@import 'components/card';
 
 // utilities
-
-// **** Partial Split Our Code into Different Files  **** //
-// For Example: we have a file called variables and we have a file called colors etc
-// and then we could just bring all of those partial files together into one single root
-// sass file using partials keep our code modular easier to maintain and easier to read
-
-// any file name with underscore _ it's not going to compile into a css fle this is one way of telling sass that this file is just a partial which we might use elsewhere but we dont't want it compiling
-// matlab yeh hai k agar hum underscore ky sath file name banengy tu uski alag sy css file nahi bany gi warna agar hum underscore na lagien tu uski alag sy css file banegi
-
-// we don't need the scss extension the sass compiler clever enough to figure that out for it self
-
-// ---> Note
-// The Order importing file is matter becuase different files might depend on code previously created in other files for example: if inside the base file we created a selector like .test and inside this we give it a color which is going to be a variable which we declare inside the variables file we gonna call it primary and we are just using that variable in the base file this is allowed because base is below variables in the import order so this mean anything decalre inside variables pulled in first of all and therefore by the time it gets to  the base file it knows what those variables are and we can use them
