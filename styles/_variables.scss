@@ -23,27 +23,6 @@ $colors: (
   'white': white,
 );
 
-.test-btn {
-  background-color: map-get($colors, 'red');
-}
-
-// map-get -> get us a value from a map
-// @debug map-get(which map we want to lookout, key)
-
-@debug map-get($colors, 'purple');
-@debug map-has-key(
-  $colors,
-  'secondary'
-); // checking if  particular key is available on map or not
-@debug map-has-key($colors, 'ttt');
-@debug map-remove($colors, 'primary'); // removing the value with key of primary
-@debug map-merge(
-  $colors,
-  (
-    'pink': #ffc0cb,
-  )
-); // adding new color in map
-
 // spacing
 $base-padding: 0.75rem;
 $base-margin: 0.75rem;

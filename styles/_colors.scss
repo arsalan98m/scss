@@ -1,0 +1,49 @@
+// looping thorugh map
+
+// key and val are just local variables so outisde of this loop it could not available
+
+// Part 1 - Generating colors
+
+// @each $key, $val in $colors {
+//   .text-#{$key} {
+//     color: $val;
+//   }
+
+//   .bg-#{$key} {
+//     background-color: $val;
+//   }
+// }
+
+// Part 2 - Genearting dark and light colors
+@each $key, $val in $colors {
+  .text-#{$key} {
+    color: $val;
+  }
+
+  .bg-#{$key} {
+    background-color: $val;
+  }
+
+  // running for loop for 9 times to generate light and dark variations
+  // light vaiations
+  @for $i from 1 through 9 {
+    .text-#{$key}-light-#{$i} {
+      color: mix(white, $val, $i * 10);
+    }
+
+    .bg-#{$key}-light-#{$i} {
+      background-color: mix(white, $val, $i * 10);
+    }
+  }
+
+  // dark vaiations
+  @for $i from 1 through 9 {
+    .text-#{$key}-dark-#{$i} {
+      color: mix(black, $val, $i * 10);
+    }
+
+    .bg-#{$key}-dark-#{$i} {
+      background-color: mix(black, $val, $i * 10);
+    }
+  }
+}

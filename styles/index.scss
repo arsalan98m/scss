@@ -5,12 +5,11 @@
 @import '_base';
 
 // colors
+@import '_colors';
 
 // components (button,card,navbar)
 @import 'components/card';
 
 // utilities
 
-// ***  Use of Maps *** //
-
-// Maps are a bit like associative arrays in programming languages or maybe a little bit like an object in javascript its basically a way we can collect a lot of different varaibles or values together in some kind of collection and that collection is going to have key value pairs and they're really useful for generating utility classes where by we loop through a map and generate a class for each value in that map Now we are going to create some kind of color palettes beyond our theme colors right now
+// *** Now for loop we need to see on _colors.scss file *** //
